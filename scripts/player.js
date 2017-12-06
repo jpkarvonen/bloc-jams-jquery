@@ -52,7 +52,7 @@ class Player {
     const minutes = Math.floor(timeInSeconds / 60).toString();
     const seconds = Math.floor(timeInSeconds % 60).toString();
     // Trying to keep the M:SS format even when seconds are in the tens
-    //if (seconds.length < 2) { seconds = '0:0' + seconds};
+    if (seconds.length < 2) {return minutes + ':0' + seconds;}
     return minutes + ':' + seconds;
   }
 
